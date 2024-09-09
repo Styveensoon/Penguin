@@ -33,9 +33,33 @@ body
     font-size: x-large;
     margin-left: 120px;
     margin-top: 90px;
-    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-family: "Cabin", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     position: absolute;
 }
+span {
+    font-size: 50px;
+    display: inline-block; /* Cambiado de block a inline-block para alinear correctamente */
+    white-space: nowrap;
+    font-family: "Cabin", sans-serif;
+    font-weight: bold;
+    width: 20ch;
+    overflow: hidden;
+
+    /* Se deben separar las animaciones con comas */
+    animation: typing 2s steps(20) forwards, blink 1s infinite step-end alternate;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 21ch; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
 .penguin {
     position: absolute;
     width: 300px;
